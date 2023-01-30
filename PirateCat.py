@@ -1,6 +1,6 @@
 ###########################################################################################
-# Name: Dr. Jean Gourd
-# Date: 2022-01-04
+# Name: Julia Piper and Isabelle Kalway
+# Date: 2022-01-30
 # Description: A basic GUI Room Adventure game to show its mechanics and gameplay.
 ###########################################################################################
 
@@ -184,9 +184,9 @@ class Game(Frame):
 
         r2.description = "This room smells funny."
         r2.addExit("up", r3)
-        r2.addExit("south", r4)
-        r2.addItem("rug", "It appears to be Persian. It also needs to be\nvacuumed.")
-        r2.addItem("fireplace", "It is full of ashes and smells dank.")
+        r2.addExit("east", r4)
+        r2.addGrabbable("sword", "A shiny sword. You can see your reflection off of its blade.")
+        r2.addItem()
         Game.rooms.append(r2)
 
 ##################################### room 3-CROWS NEST #######################################
@@ -195,7 +195,7 @@ class Game(Frame):
         r3.addExit("down", r2)
         r3.addGrabbable("baby hippo")
         
-        r3.addItem("bookshelves", "They are empty. Go figure.")
+        r3.addGrabbable("rope", "A pile of rope. It's dirty and a little wet. Yuck.")
         r3.addItem("statue", "There is nothing special about it.")
         r3.addItem("desk", "The statue is resting on it. So is a book.")
         Game.rooms.append(r3)
